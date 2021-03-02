@@ -11,6 +11,8 @@ import { useLayoutStorage, useWindowSize } from '../../hooks';
 import { LayoutFooter, LayoutPageHeader } from '../_commons';
 import { CollapseType } from 'antd/lib/layout/Sider';
 
+import './style.less';
+
 const { Content } = Layout;
 
 function PrivateLayout({ route, ...props }: LayoutProps) {
@@ -54,7 +56,7 @@ function PrivateLayout({ route, ...props }: LayoutProps) {
   }
 
   return (
-    <Layout className="layout-container">
+    <Layout className="layout-container private-container">
       <PrivateSider onCollapse={onCollapse} collapsed={isCollapsed} />
       <Layout className="layout-main" style={layoutStyle()}>
         <PrivateHeader
