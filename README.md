@@ -1,6 +1,6 @@
 # cra-template-senai
 
-Esté é o template oficial do SENAI para criação de aplicações em **Create React App**.\
+Este é o template oficial do SENAI para criação de aplicações em **Create React App**.\
 O template foi desenvolvido a partir do [cra-template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/cra-template-typescript).
 
 Para usar este template, adicione o comando `--template senai` ao criar um novo projeto.
@@ -55,7 +55,7 @@ const routes: RouteCustomProps[] = formatRoutes([
     // Se a rota for layout custom, é obrigatório informar qual o componente do layout para ser renderizado
     layoutComponent: CustomLayout,
 
-    // O page é utilizado para passar as informações da página,
+    // A page é utilizada para passar as informações da página,
     page: { title: 'Layout Custom' },
   },
 
@@ -90,10 +90,10 @@ const routes: RouteCustomProps[] = formatRoutes([
     menu: {
       icon: UserOutlined,
       title: 'Dashboard',
-      // caso queira exibir uma copia dessa rota como sub-rota para renderizar no menu infore a prop insideSubmenu
+      // caso queira exibir uma copia dessa rota como sub-rota para renderizar no menu, infore a prop insideSubmenu
       insideSubmenu: { icon: UserOutlined, title: 'Início' },
     },
-    // É possível renderizar rotas aninhadas, se as sub rotas tiver a prop menu e for uma rota válida ela será exibida como sub-menu.
+    // É possível renderizar rotas aninhadas, se as sub rotas tiver a prop menu e for uma rota válida, ela será exibida como sub-menu.
     routes: [
       {
         path: '/sub-page',
@@ -114,7 +114,7 @@ const routes: RouteCustomProps[] = formatRoutes([
     page: { title: 'Perfil' },
     menu: { icon: AvatarCommon },
 
-    // itilize essa prop para passar informações adicionais, se passar header com o valor true e for uma rota válida, ela será exibida no menu do header.
+    // Utilize essa prop para passar informações adicionais, se passar header com o valor true e for uma rota válida, ela será exibida no menu do cabeçalho.
     extra: { header: true },
   },
 
@@ -164,7 +164,7 @@ Visualize a tipagem `RouteCustomProps` para ver todos os tipos de props, em `./s
 
 ## Componentes de contexto
 
-Para evitar perda de informações e melhor gerenciamento das informações por toda a aplicação, foram implementados dois componentes de contexto.
+Para evitar perda de informações e melhorar o gerenciamento das dados por toda a aplicação, foram implementados dois componentes de contexto.
 
 - **Authentication**: responsável pelo o armazenamento das informações do usuário logado. No componente `AuthenticationProvider` é necessário passar uma propriedade `storageManager`, responsável para o armazenamento das informações.
 
@@ -186,7 +186,23 @@ function App() {
     </AuthenticationProvider>
   )
 }
+```
 
+Exemplo de chamada:
+```tsx
+// MyComponent.tsx
+
+import { useAuthentication } from './contexts/authentication';
+
+interface AuthData {
+  name: strinng;
+}
+
+function MyComponent() {
+  const { authData } = useAuthentication<AuthData>();
+
+  return <p>{authData.name}</p>;
+}
 ```
 OBS: este componente pode ser reutilizado para aplicações em **React Native**
 
@@ -226,6 +242,41 @@ function App() {
 }
 ```
 
+Exemplo de chamada:
+```tsx
+// MyComponent.tsx
+
+import { useState } from 'react';
+import { useService } from './contexts/service';
+
+interface User {
+  id: strinng;
+  name: strinng;
+}
+
+function MyComponent() {
+  const service = useService();
+  const [users, setUsers] = useState<User[]>([]);
+
+  useEffect(() => {
+    getUsers();
+  },[]);
+
+  const getUsers = async () => {
+    await service
+      .get<User[]>('/users')
+      .then(({ data }) => setUsers(data));
+  }
+
+  return (
+    <div>
+      {users.map((user) => (
+        <p key={user.id}>{user.name}</p>
+      ))}
+    </div>
+  );
+}
+```
 ## Saiba mais
 
 Para obter mais informações sobre o **Create React App**, consulte:
@@ -235,4 +286,4 @@ Para obter mais informações sobre o **Create React App**, consulte:
 
 ## Agradecimento
 
-Muito obrigado ao Jhon por me ajudar no projeto base para o desenvolvimento desse template.
+Muito obrigado ao **Jhon** por me ajudar no projeto base para o desenvolvimento desse template.
