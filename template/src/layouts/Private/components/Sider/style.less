@@ -1,0 +1,35 @@
+@import '~antd/lib/style/themes/default.less';
+
+.private-sider {
+  overflow-x: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  z-index: 100;
+
+  background-image: linear-gradient(@primary-5, @primary-6);
+
+  .layout-menu {
+    background-color: transparent;
+
+    .ant-menu-item {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .ant-menu-item-selected::after {
+      border-color: @white !important;
+    }
+  }
+
+  .project-name {
+    span {
+      color: @white;
+    }
+  }
+
+  .ant-divider {
+    border-color: rgba(255, 255, 255, 10%);
+    margin: 0;
+  }
+}

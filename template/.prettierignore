@@ -1,0 +1,8 @@
+# Ignore artifacts:
+
+# production
+/build
+coverage
+
+# development
+/node_modules
