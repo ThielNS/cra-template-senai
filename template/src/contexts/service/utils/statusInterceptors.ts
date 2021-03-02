@@ -14,15 +14,19 @@ export async function handler401({ auth, config, service }: HandlerStatus) {
   return new Promise(async (resolve, reject) => {
     try {
       if (auth && service) {
-        const { accessToken } = await auth.setAuthenticationAsync({
-          authData: { role: 'admin' },
-          accessToken: 'token 398e7df30186c04af452be321b343d47489fff1a',
-        });
+        // Implement a rule for refresh token
+        const hasConfig = false;
+        // Remove the code from line 17 to 24 and implement a rule.
+        if (!hasConfig) {
+          throw new Error(
+            `Você não configurou uma regra de 'Refresh Token'.\nAltere o arquivo './src/contexts/service/utils/statusInterceptors.ts'`,
+          );
+        }
 
         await service
           .request({
             ...config.config,
-            headers: { Authorization: accessToken },
+            headers: { Authorization: 'MY_NEW_ACCESS_TOKEN' },
           })
           .then((res) => resolve(res))
           .catch(() => {
