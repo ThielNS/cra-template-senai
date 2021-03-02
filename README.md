@@ -19,9 +19,9 @@ yarn create react-app batata-app --template senai
 
 Como este projeto foi desenvolvido com baso no `cra-template-typescript`, ele já vem com o typescript habilitado por padrão. 
 
-- [Ant Design]() - Lib de React UI que contém um conjuto de componentes para construção de interfaces.
-- [Axios]() - Lib de requisições HTTP baseado em `promises` para o navegador e node.js.
-- [React Router Dom]() - Lib JS de controle de rotas de páginas com base em componentes JSX.
+- [Ant Design](https://github.com/ant-design/ant-design) - Lib de React UI que contém um conjuto de componentes para construção de interfaces.
+- [Axios](https://github.com/axios/axios) - Lib de requisições HTTP baseado em `promises` para o navegador e node.js.
+- [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - Lib JS de controle de rotas de páginas com base em componentes JSX.
 
 ## Configuração de rotas
 
