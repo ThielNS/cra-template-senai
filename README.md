@@ -277,6 +277,37 @@ function MyComponent() {
   );
 }
 ```
+
+## Prints do layout base
+
+**Login**
+
+![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-login.png)
+
+**Aplicação**
+
+![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app.png)
+
+**Repositórios**
+
+![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-repositories.png)
+
+**Menu lateral fechado**
+
+![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app-sider-close.png)
+
+**Responsivo Mobile**
+
+<kbd>
+  <img src="https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app-mobile.png" width="300">
+</kbd>
+
+**Responsivo Mobile menu lateral aberto**
+
+<kbd>
+  <img src="https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app-mobile-sider-open.png" width="300">
+</kbd>
+
 ## Saiba mais
 
 Para obter mais informações sobre o **Create React App**, consulte:

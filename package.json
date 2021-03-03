@@ -20,6 +20,7 @@
     "url": "https://github.com/ThielNS/cra-template-senai/issues"
   },
   "files": [
+    "screens",
     "template",
     "template.json"
   ]
