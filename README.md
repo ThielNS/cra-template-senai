@@ -1,7 +1,7 @@
 # cra-template-senai
 
 Este é o template oficial do SENAI para criação de aplicações em **Create React App**.\
-O template foi desenvolvido a partir do [cra-template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/cra-template-typescript).
+O template foi desenvolvido a partir do [cra-template-typescript](https://github.com/facebook/create-react-app/blob/master/packages/cra-template-typescript).
 
 Para usar este template, adicione o comando `--template senai` ao criar um novo projeto.
 
@@ -21,7 +21,7 @@ Como este projeto foi desenvolvido com baso no `cra-template-typescript`, ele j�
 
 - [Ant Design](https://github.com/ant-design/ant-design) - Lib de React UI que contém um conjuto de componentes para construção de interfaces.
 - [Axios](https://github.com/axios/axios) - Lib de requisições HTTP baseado em `promises` para o navegador e node.js.
-- [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - Lib JS de controle de rotas de páginas com base em componentes JSX.
+- [React Router Dom](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom) - Lib JS de controle de rotas de páginas com base em componentes JSX.
 
 ## Configuração de rotas
 
@@ -282,31 +282,28 @@ function MyComponent() {
 
 **Login**
 
-![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-login.png)
+![](https://github.com/ThielNS/cra-template-senai/blob/main/screens/base-login.png?raw=true)
 
 **Aplicação**
 
-![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app.png)
+![](https://github.com/ThielNS/cra-template-senai/blob/main/screens/base-app.png?raw=true)
 
 **Repositórios**
 
-![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-repositories.png)
+![](https://github.com/ThielNS/cra-template-senai/blob/main/screens/base-repositories.png?raw=true)
 
 **Menu lateral fechado**
 
-![](https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app-sider-close.png)
+![](https://github.com/ThielNS/cra-template-senai/blob/main/screens/base-app-sider-close.png?raw=true)
 
 **Responsivo Mobile**
 
-<kbd>
-  <img src="https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app-mobile.png" width="300">
-</kbd>
+<img src="https://github.com/ThielNS/cra-template-senai/blob/main/screens/base-app-mobile.png?raw=true" width="300">
 
 **Responsivo Mobile menu lateral aberto**
 
-<kbd>
-  <img src="https://github.com/ThielNS/cra-template-senai/tree/main/screens/base-app-mobile-sider-open.png" width="300">
-</kbd>
+
+<img src="https://github.com/ThielNS/cra-template-senai/blob/main/screens/base-app-mobile-sider-open.png?raw=true" width="300">
 
 ## Saiba mais
 
