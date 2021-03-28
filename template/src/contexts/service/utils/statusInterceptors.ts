@@ -8,7 +8,7 @@ export interface HandlerStatus {
   service?: ServiceContextProps;
 }
 
-const { history } = window;
+const { location } = window;
 
 export async function handler401({ auth, config, service }: HandlerStatus) {
   return new Promise(async (resolve, reject) => {
@@ -34,20 +34,21 @@ export async function handler401({ auth, config, service }: HandlerStatus) {
 
             reject(config);
 
-            if (history) {
-              history.pushState(null, '', '');
+            if (location) {
+              location.assign('/');
             }
           });
       }
     } catch (error) {
+      console.log(error);
       reject(error);
     }
   });
 }
 
 export async function handlerRedirectPageError({ config }: HandlerStatus) {
-  if (history) {
-    history.pushState(null, '', String(config.response?.status));
+  if (location) {
+    location.assign(`/${String(config.response?.status)}`);
   }
 
   return Promise.reject(config);
