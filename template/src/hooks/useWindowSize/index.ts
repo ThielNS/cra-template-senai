@@ -1,12 +1,6 @@
 import { useState, useEffect } from 'react';
-import breakpoints, { BreakpointMap } from '../utils/constants/breakpoints';
-
-interface WindowSize {
-  width: number;
-  height: number;
-  isMobile: boolean;
-  breakpoint: BreakpointMap;
-}
+import breakpoints from '../../utils/constants/breakpoints';
+import { WindowSize } from './types';
 
 function getBreakpointMap(size: number) {
   let breakpoint = {};

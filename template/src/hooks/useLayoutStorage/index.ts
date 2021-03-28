@@ -1,13 +1,5 @@
 import { useState } from 'react';
-
-export interface LayoutStorage {
-  isCollapsed?: boolean;
-}
-
-export interface UseLayoutStorage {
-  layoutStorage: LayoutStorage;
-  setLayoutStorage: (props: LayoutStorage) => void;
-}
+import { UseLayoutStorage, LayoutStorage } from './types';
 
 const LAYOUT_STORAGE_KEY = 'LAYOUT_STORAGE';
 
