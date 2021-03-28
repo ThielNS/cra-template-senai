@@ -2,6 +2,7 @@ import { ConfigProvider } from 'antd';
 import locale from 'antd/es/locale/pt_BR';
 
 import { AuthenticationProvider, ServiceProvider } from './contexts';
+import RootContext from './contexts/RootContext';
 import RouterNavigation from './route';
 import serviceInterceptors from './contexts/service/utils/interceptors';
 import { LoadingPage } from './components';
@@ -18,7 +19,9 @@ function App() {
             interceptors={serviceInterceptors({ accessToken, ...restAuth })}
           >
             <ConfigProvider locale={locale}>
-              <RouterNavigation />
+              <RootContext>
+                <RouterNavigation />
+              </RootContext>
             </ConfigProvider>
           </ServiceProvider>
         ) : (
