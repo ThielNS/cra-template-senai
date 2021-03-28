@@ -2,6 +2,7 @@
 
 # production
 /build
+/plop
 coverage
 
 # development

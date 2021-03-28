@@ -1,0 +1,26 @@
+/**
+ *
+ * {{ pascalCase name }} Context
+ *
+ */
+
+import { createContext, useContext, useState } from 'react';
+import { {{pascalCase name}}ProviderProps, {{pascalCase name}}ContextProps } from './types';
+
+const {{pascalCase name}}Context = createContext({} as {{pascalCase name}}ContextProps);
+
+function {{pascalCase name}}Provider(props: {{pascalCase name}}ProviderProps) {
+  const [data, setData] = useState();
+
+  return (
+    <{{pascalCase name}}Context.Provider value=\{{ data, setData }}>
+      {props.children}
+    </{{pascalCase name}}Context.Provider>
+  );
+}
+
+export function use{{pascalCase name}}() {
+  return useContext({{pascalCase name}}Context);
+}
+
+export default {{pascalCase name}}Provider;
