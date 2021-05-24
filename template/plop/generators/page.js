@@ -77,6 +77,12 @@ const generatorConfig = {
           template: `, {{pascalCase name}}Page } from '../pages';\n`,
         },
         {
+          type: 'modify',
+          path: `${generatorPaths.routes}`,
+          pattern: /(} from '\.\.\/pages';\n)+/g,
+          template: `  {{pascalCase name}}Page,\n} from '../pages';\n`,
+        },
+        {
           type: 'append',
           path: `${generatorPaths.routes}`,
           pattern: /(const routes: RouteCustomProps\[] = formatRoutes\(\[\n)+/g,
