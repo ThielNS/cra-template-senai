@@ -79,7 +79,7 @@ const generatorConfig = {
         {
           type: 'modify',
           path: `${generatorPaths.routes}`,
-          pattern: /(} from '\.\.\/pages';\n)+/g,
+          pattern: /(\n} from '\.\.\/pages';\n)+/g,
           template: `  {{pascalCase name}}Page,\n} from '../pages';\n`,
         },
         {
